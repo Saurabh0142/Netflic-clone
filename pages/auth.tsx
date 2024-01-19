@@ -24,10 +24,10 @@ const login= useCallback(async()=>{
     await signIn('credentials',{
       email,
       password,
-      //redirect: false,
+      redirect: false,
       callbackUrl:'/profiles'
     });
-    //router.push('/');
+    
   }
   catch(error){
     console.log(error);
@@ -47,7 +47,7 @@ const register = useCallback(async () => {
   } catch (error) {
       console.log(error);
   }
-}, [email, name, password]);
+}, [email, name, password,login]);
 
 
 

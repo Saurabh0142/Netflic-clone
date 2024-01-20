@@ -7,7 +7,10 @@ import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 
 
+
+
 const Auth =()=>{
+
 
 const [email,setEmail]=useState('');
 const [name,setName]=useState('');
@@ -24,7 +27,7 @@ const login= useCallback(async()=>{
     await signIn('credentials',{
       email,
       password,
-      redirect: false,
+      
       callbackUrl:'/profiles'
     });
     
